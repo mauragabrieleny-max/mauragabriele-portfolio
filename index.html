@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maura Gabriele | Creative Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --navy: #0b1a33;
+      --light-blue: #a7c7e7;
+      --white: #ffffff;
+      --gray: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--navy);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--navy), #1e2e4e);
+      color: var(--white);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: var(--light-blue);
+      color: var(--navy);
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #8bb9df;
+    }
+
+    nav {
+      background-color: var(--white);
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--navy);
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--light-blue);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--light-blue);
+      padding-left: 0.75rem;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: var(--gray);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      display: block;
+    }
+
+    .project-info {
+      padding: 1rem;
+    }
+
+    .project-info h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .project-info p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .contact {
+      background-color: var(--light-blue);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+
+    .contact a {
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: var(--navy);
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #444;
+    }
+
+    footer {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+	  .about-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 40px;
+}
+
+.about-label {
+    letter-spacing: 3px;
+    font-size: .8rem;
+    color: #888;
+}
+
+.about-hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    margin: 20px 0 60px;
+}
+
+.about-intro p {
+    font-size: 1.25rem;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 120px auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.year {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.event {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.fact-card {
+    padding: 35px;
+    border-radius: 24px;
+    background: #fafafa;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maura Gabriele</h1>
+    <p>Creative Designer | JMU Graduate | Visual Storyteller</p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+  </header>
+
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="capstone.html">Capstone</a>
+    <a href="work.html">Work</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+
+  <section class="about-hero">
+
+
+    <h1>
+        Here's the scoop.
+    </h1>
+
+    <div class="about-intro">
+
+        <p>
+            Hi, I'm Maura.
+        </p>
+
+        <p>
+            I'm a content strategist, UX writer, and digital experience professional based in New York.
+        </p>
+
+        <p>
+            By day, I work in digital advertising operations helping bring campaigns to life. By nature, I'm endlessly curious about how people interact with content, technology, and the world around them.
+        </p>
+
+        <p>
+            I love discovering hidden spots around New York, planning my next trip before I've finished the current one, and turning complicated information into experiences that feel simple and human.
+        </p>
+
+        <p>
+            If you're interested in content, design, storytelling, or finding the best restaurant nobody knows about, we'll probably get along.
+        </p>
+
+    </div>
+
+</section>
+	
+	    <h2>Where it all began...</h2>
+	<section class="timeline">
+
+    <div class="timeline-item">
+        <div class="year">2002</div>
+        <div class="event">
+            Born and raised in Westchester County, NY.
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2021</div>
+        <div class="event">
+        Began my life as a JMU Duke while studying Media Arts and Design.&nbsp; </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2025</div>
+        <div class="event">
+            Graduated and officially entered the world of content strategy and digital experiences.
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2025</div>
+        <div class="event">
+          Joined People Inc. as a Digital Ad Operations Coordinator.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">Today</div>
+        <div class="event">
+            Exploring opportunities in content design, UX writing, and digital storytelling.
+        </div>
+    </div>
+
+</section>
+	
+	<section class="fun-facts">
+
+    <h2>Some fun facts about me.</h2>
+
+    <div class="facts-grid">
+
+        <div class="fact-card">
+            <h3>Travel</h3>
+            <p>
+                Throughout the larger part of my childhood, I would spend school breaks, summers etc. traveling. By the age of 17 I had visited 38 countries spanning across 5 continents. Ultimately traveling has been such a pillar in the way I choose to live my life and I hope to go... well, everywhere!
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>New York</h3>
+            <p>
+                On the same POA of seeing the entire globe, within the five bouroughs of NYC there is an entire world. Exploring since coming back from college has truly been such a special experience. Witnessing the city in a whole new persepctive has been so pivotal for me settling in my forever home. 
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>Reading</h3>
+            <p>
+                Screentime was getting out of control, as it does. Ultimately decided cutting back wasn't possible given the line of work we are in, so I pivoted and decided maybe we can counteract with a proper educational art. Reading!! So far in 2026 we have read 16 books, favorites being The Nightingale by Kristin Hannah and 11/22/63 by Stephen King.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>Hobbies</h3>
+            <p>
+                Grounding myself and stepping away from the screens is vital so I try to lean into as many hobbies as possible. Needlepoint, watercolor painting, gardening (weather permitting), barista passions, and creating the OG pinterest boards out of recycled magazines. This has been such a fun thing to dive deeper into during my post-grad years. 
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="Waterloo 3.png" alt="WaterLoo">
+          <div class="project-info">
+            <h3>Waterloo Social Campaign Fall 2024</h3>
+            <p>Contributed to a lifestyle-focused social campaign highlighting
+      Waterloo's connection to movement, wellness, outdoor recreation,
+      and community. Assisted with wardrobe selection, shoot setup,
+      prop styling, and Instagram-first content planning to create
+      engaging, authentic brand storytelling.</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="LG2.jpg" alt="Atmospheric Composition Graphic">
+          <div class="project-info">
+            <h3>Leslie George Philanthropy Brand Statement</h3>
+            <p>This project involved the rebranding of our sorority’s local philanthropy event, the "Leslie George Speak Out", held in memory of our beloved sister Leslie, who passed away due to an eating disorder. The initiative aims to create a safe and supportive space for individuals—especially young women—to raise awareness, share personal stories, and speak openly about their struggles with body image and eating disorders. The rebrand focused on developing a strong visual identity, including a new logo, cohesive messaging, and promotional materials that reflect the mission of empowerment, remembrance, and education. This rebranding was quickly implemented into our social media pages and was successful in spreading awareness of not only the philanthropy but the event itself leading to the highest attendance rate here to date.</p>
+          </div>
+        </div>
+        <div class="project">
+         <img src="Game Apparel 1.png" alt="Game Day Apparel 1">
+          <div class="project-info">
+            <h3>Game Day Apparel</h3>
+            <p>&nbsp;Developed the creative strategy, campaign concept, and photoshoot plan for a local custom apparel brand. The goal was to showcase the products through authentic lifestyle imagery that emphasized community, personality, and brand identity rather than traditional product-focused photography.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <div class="contact-info">
+            <a href="mailto:mauragabriele.ny@gmail.com" class="contact-item">
+                ✉️ mauragabriele.ny@gmail.com
+            </a>
+
+            <a href="tel:+19144331139" class="contact-item">
+                📞 (914) 433-1139
+            </a>
+
+            <a href="www.linkedin.com/in/maura-gabriele-64304a213"
+               target="_blank"
+               class="contact-item">
+                💼 LinkedIn
+            </a>
+
+            <span class="contact-item">
+                📍 New York, NY
+            </span>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Maura Gabriele. Designed with passion and pixels.</p>
+  </footer>
+
+</body>
+</html>
